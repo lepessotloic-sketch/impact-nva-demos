@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr" data-mode="demo" data-logo="" data-logo-fond="" data-email="" data-champs="accroche presentation annee_creation dirigeant adresse facebook instagram avis note avantapres" data-compteur="" data-domaine="lepessotloic-sketch.github.io/impact-nva-demos/jardins-de-la-brie-8kt9va">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0A0F0C">
+
+<!-- JOUR / NUIT, avant le premier affichage (pas d'éclair blanc).
+     Le choix du visiteur (bouton de l'en-tête) passe en premier. Sinon,
+     selon l'heure : clair de 8 h à 21 h, sombre ensuite (README du gabarit).
+     Sans script : le site suit le réglage clair/sombre de l'appareil. -->
+<script>
+(function () {
+  var html = document.documentElement, t = null;
+  html.classList.add('js');
+  try { t = localStorage.getItem('theme-site'); } catch (e) {}
+  if (t !== 'jour' && t !== 'nuit') {
+    var h = new Date().getHours();
+    t = (h >= 8 && h < 21) ? 'jour' : 'nuit';
+  }
+  html.setAttribute('data-theme', t);
+})();
+</script>
+
+<!-- Polices hébergées avec le site : aucun appel à Google, aucun cookie. -->
+<link rel="preload" href="assets/fonts/playfair-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+
+<style>
+  html:not([data-logo=""]) .brand-logo,
+  html:not([data-logo=""]) .hero-logo,
+  html:not([data-logo=""]) .footer-logo { background-image: url(""); }
+</style>
+
+<!-- UNE PAGE PAR SERVICE. Le moteur ecrit ce fichier une fois par service
+     (gabarit.json, "pour": "SERVICES"), sous le nom service-<titre>.html.
+     Le titre de la page porte le service ET la ville : c est ce que tape
+     quelqu un qui cherche « taille de haies Coulommiers ». -->
+<title>Création de jardin à Coulommiers — Jardins de la Brie</title>
+<meta name="description" content="Création de jardin à Coulommiers et dans Coulommiers et la Brie, dans un rayon de 25 km par Jardins de la Brie. Plantations, massifs, gazon, paillage : nous dessinons et réalisons votre extérieur de A à Z. Devis gratuit au 06 12 34 56 78.">
+<link rel="canonical" href="https://lepessotloic-sketch.github.io/impact-nva-demos/jardins-de-la-brie-8kt9va/service-creation-de-jardin.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Création de jardin à Coulommiers — Jardins de la Brie">
+<meta property="og:description" content="Plantations, massifs, gazon, paillage : nous dessinons et réalisons votre extérieur de A à Z.">
+<meta property="og:url" content="https://lepessotloic-sketch.github.io/impact-nva-demos/jardins-de-la-brie-8kt9va/service-creation-de-jardin.html">
+<meta property="og:image" content="https://lepessotloic-sketch.github.io/impact-nva-demos/jardins-de-la-brie-8kt9va/assets/images/demo-4.webp">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Création de jardin",
+  "description": "Plantations, massifs, gazon, paillage : nous dessinons et réalisons votre extérieur de A à Z.",
+  "areaServed": "Coulommiers, Mouroux, Boissy-le-Châtel, Chauffry, Saint-Augustin, La Ferté-Gaucher, Faremoutiers, Crécy-la-Chapelle",
+  "provider": {
+    "@type": "LandscapingBusiness",
+    "name": "Jardins de la Brie",
+    "url": "https://lepessotloic-sketch.github.io/impact-nva-demos/jardins-de-la-brie-8kt9va/",
+    "telephone": "+33612345678"
+  }
+}
+</script></head>
+
+<body data-page="services">
+
+<div class="bandeau-demo">
+  <strong>Démonstration privée</strong> — aperçu pour Jardins de la Brie, non référencé et non définitif.
+</div>
+
+<a class="visuellement-cache" href="#contenu">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Jardins de la Brie, retour à l'accueil">
+      <span class="brand-logo" role="img" aria-label="Jardins de la Brie"></span>
+      <span class="brand-texte">
+        <span class="brand-nom">Jardins de la Brie</span>
+        <span class="brand-sous">Paysagiste &middot; Coulommiers</span>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Navigation principale">
+      <ul class="nav-links" id="nav-links">
+        <li><a data-lien="services" href="index.html#services">Services</a></li>
+        <li><a data-lien="realisations" href="index.html#realisations">Réalisations</a></li>
+        <li class="bloc-avis"><a data-lien="avis" href="index.html#avis">Avis</a></li>
+        <li><a data-lien="intervention" href="intervention.html">Où nous intervenons</a></li>
+        <li><a data-lien="contact" href="contact.html">Contact</a></li>
+        <li class="nav-appel"><a class="cta-button" href="tel:+33612345678">Appeler le 06 12 34 56 78</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Basculer entre le mode jour et le mode nuit">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M18.7 5.3 17 7M7 17l-1.7 1.7"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 14.2A8.2 8.2 0 0 1 9.8 3.8a8.2 8.2 0 1 0 10.4 10.4Z"/></svg>
+      </button>
+      <a class="cta-button header-cta" href="tel:+33612345678"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg> 06 12 34 56 78</a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Ouvrir le menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+<main id="contenu">
+
+  <section class="page-hero">
+    <div class="container page-hero-grid">
+      <div>
+        <ol class="fil" aria-label="Vous êtes ici">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li>Création de jardin</li>
+        </ol>
+        <p class="hero-kicker">Jardins de la Brie &middot; Coulommiers</p>
+        <h1>Création de jardin à <span class="hero-accent">Coulommiers</span></h1>
+        <p class="section-lead">Plantations, massifs, gazon, paillage : nous dessinons et réalisons votre extérieur de A à Z.</p>
+      </div>
+      <div class="page-hero-visual" aria-hidden="true">
+        <svg class="hero-orbits" viewBox="0 0 600 600" fill="none" aria-hidden="true">
+          <circle cx="300" cy="300" r="286" stroke="currentColor" stroke-width="1" stroke-dasharray="420 1380" stroke-linecap="round"/>
+          <circle cx="300" cy="300" r="238" stroke="currentColor" stroke-width="1" stroke-dasharray="300 1200" stroke-dashoffset="-400" stroke-linecap="round" opacity=".5"/>
+        </svg>
+        <span class="hero-logo"></span>
+        <span class="logo-place">Votre logo<br>ici</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container service-grid reveal">
+      <div>
+        <div class="service__icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg></div>
+        <h2 class="section-title">Ce que comprend la prestation.</h2>
+        <p class="section-lead">Nous étudions votre terrain, proposons un plan et un choix de plantes adaptées au sol et à l'exposition, puis réalisons tout : terrassement, plantations, gazon, paillage.</p>
+        <p class="section-lead">Nous passons voir votre terrain avant de chiffrer. Le devis est gratuit, détaillé, et vous savez exactement ce qui sera fait avant que nous commencions.</p>
+        <div class="hero-actions">
+          <a class="cta-button" href="contact.html">Demander un devis</a>
+        </div>
+      </div>
+      <figure class="service-photo">
+        <img src="assets/images/demo-4.webp" alt="Création de jardin réalisé par Jardins de la Brie" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <section class="section section-alt centre">
+    <div class="container reveal">
+      <div class="section-head">
+        <h2 class="section-title">Création de jardin dans votre commune.</h2>
+        <p class="section-lead">Nous proposons cette prestation à Coulommiers et dans les communes alentour.</p>
+      </div>
+      <ul class="communes">
+        <li>Coulommiers</li>
+          <li>Mouroux</li>
+          <li>Boissy-le-Châtel</li>
+          <li>Chauffry</li>
+          <li>Saint-Augustin</li>
+          <li>La Ferté-Gaucher</li>
+          <li>Faremoutiers</li>
+          <li>Crécy-la-Chapelle</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section centre">
+    <div class="container reveal">
+      <div class="section-head">
+        <h2 class="section-title">Nous faisons aussi.</h2>
+      </div>
+      <ul class="liste-liens">
+        <li><a href="service-entretien-de-jardin.html">Entretien de jardin</a></li>
+          <li><a href="service-taille-de-haies-et-arbustes.html">Taille de haies et arbustes</a></li>
+          <li><a href="service-terrasses-et-allees.html">Terrasses et allées</a></li>
+          <li><a href="service-clotures-et-portails.html">Clôtures et portails</a></li>
+          <li><a href="service-debroussaillage.html">Débroussaillage</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section-appel">
+    <div class="container narrow reveal">
+      <h2 class="section-title">Un projet de ce type&nbsp;?</h2>
+      <p class="section-lead">Décrivez votre projet, joignez quelques photos&nbsp;: nous revenons vers vous rapidement avec un devis clair.</p>
+      <div class="appel-actions">
+        <a class="cta-button" href="contact.html">Demander un devis gratuit</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <span class="footer-logo" role="img" aria-label="Jardins de la Brie"></span>
+      <span class="brand-nom">Jardins de la Brie</span>
+      <p>Paysagiste à Coulommiers. Coulommiers et la Brie, dans un rayon de 25 km.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Nos services">
+      <p class="footer-title">Nos services</p>
+      <ul>
+        <li><a href="service-entretien-de-jardin.html">Entretien de jardin</a></li>
+          <li><a href="service-taille-de-haies-et-arbustes.html">Taille de haies et arbustes</a></li>
+          <li><a href="service-creation-de-jardin.html">Création de jardin</a></li>
+          <li><a href="service-terrasses-et-allees.html">Terrasses et allées</a></li>
+          <li><a href="service-clotures-et-portails.html">Clôtures et portails</a></li>
+          <li><a href="service-debroussaillage.html">Débroussaillage</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-nav" aria-label="Le site">
+      <p class="footer-title">Le site</p>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="intervention.html">Où nous intervenons</a></li>
+        <li><a href="contact.html">Contact et devis</a></li>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Jardins%20de%20la%20Brie%20Coulommiers" target="_blank" rel="noopener">Nos avis Google</a></li>
+      </ul>
+    </nav>
+    <div class="footer-contact">
+      <p class="footer-title">Nous joindre</p>
+      <p class="bloc-email"><a href=""></a></p>
+      <p>du lundi au vendredi, 8h-18h, et le samedi matin</p>
+      <p class="bloc-reseaux">
+        <a class="bloc-facebook" href="https://www.facebook.com/jardinsdelabrie" target="_blank" rel="noopener">Facebook</a>
+        <a class="bloc-instagram" href="https://www.instagram.com/jardinsdelabrie" target="_blank" rel="noopener">Instagram</a>
+        <a class="bloc-linkedin" href="" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </div>
+  </div>
+  <div class="container footer-legal">
+    <p>
+      <span>&copy; <span data-annee>2026</span> Jardins de la Brie — Tous droits réservés.</span>
+      <span class="pied-liens">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a class="signature-inva" href="https://prestige.impact-nva.fr" target="_blank" rel="noopener"><img src="assets/images/impact-nva.webp" alt="" width="40" height="42" loading="lazy"><span>Site réalisé par <b>Impact-NVA</b></span></a>
+      </span>
+    </p>
+  </div>
+</footer>
+
+<a class="appel-flottant" href="tel:+33612345678"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg> Appeler 06 12 34 56 78</a>
+
+<script src="assets/js/main.js" defer></script>
+
+</body>
+</html>
